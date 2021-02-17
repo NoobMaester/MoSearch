@@ -1,0 +1,97 @@
+body {
+  background-color: #22254b;
+  color: white;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+}
+.main-header{
+  background-color: #373b69;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header h3{
+  margin: 0;
+}
+.main-header input{
+  background-color: transparent;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  padding: 5px 15px;
+  outline: none;
+}
+.movie-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.movie{
+  position: relative;
+  background-color: #373b69;
+  margin: 10px;
+  width: 270px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+.movie img{
+  max-width: 100%;
+}
+.movie-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.movie-info h3{
+  margin: 0;
+  font-size: 14px;
+}
+.movie-over{
+  border-radius: 6px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #22254b;
+  padding: 10px;
+  max-height: 100%;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform ease-in-out 0.5s ;
+}
+.movie-over h2{
+  margin: 0;
+}
+.movie-over small{
+  font-style: italic;
+}
+.movie:hover .movie-over{
+  transform: translateY(0%);
+}
+
+@media(max-width: 600px){
+  .main-header{
+    justify-content: space-around;
+    align-items: center;
+  }
+  .movie-container{
+    display: block;
+    margin: 10px auto;
+  }
+  .movie{
+    margin-bottom: 20px;
+  }
+  .movie-info h3{
+    margin: 0;
+    font-size: 14px;
+  }
+}
